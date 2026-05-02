@@ -1,0 +1,62 @@
+<?xml version='1.0'?>
+<sdf version='1.9'>
+  <model name='camera'>
+    <pose>0 0 0.18 0 0 0</pose>
+    <link name='base_link'>
+      <inertial>
+        <mass>0.02</mass>
+        <inertia>
+          <ixx>0.0001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0001</iyy>
+          <iyz>0</iyz>
+          <izz>0.0001</izz>
+        </inertia>
+      </inertial>      
+      <visual name='camera_viz'>
+        <pose>0 0 0.02 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.01</radius>
+            <length>0.01</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.4 0.4 0.4</ambient>
+          <diffuse>0.4 0.4 0.4</diffuse>
+          <specular>0.1 0.1 0.1 1.0</specular>
+        </material>
+      </visual>
+      <collision name='camera_col'>
+        <pose>0 0 0.02 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.01</radius>
+            <length>0.01</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <sensor name="camera" type="camera">
+        <gz_frame_id>tilt_link</gz_frame_id>
+        <topic>/camera/rgb</topic>
+        <pose degrees="true">0 0 0 0 0 0</pose>
+        <camera>
+          <horizontal_fov>2.0</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+          </image>
+          <clip>
+            <near>0.05</near>
+            <far>15000</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>10</update_rate>
+        <visualize>1</visualize>
+      </sensor>
+    </link>
+    
+  </model>
+</sdf>
