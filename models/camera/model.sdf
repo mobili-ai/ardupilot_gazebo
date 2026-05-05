@@ -15,7 +15,7 @@
         </inertia>
       </inertial>      
       <visual name='camera_viz'>
-        <pose>0 0 0.02 0 0 0</pose>
+        <pose>0 0 0.02 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <radius>0.01</radius>
@@ -23,13 +23,13 @@
           </cylinder>
         </geometry>
         <material>
-          <ambient>0.4 0.4 0.4</ambient>
-          <diffuse>0.4 0.4 0.4</diffuse>
-          <specular>0.1 0.1 0.1 1.0</specular>
+          <ambient>0 0 0 1</ambient>
+          <diffuse>0 0 0 1</diffuse>
+          <specular>0 0 0 1</specular>
         </material>
       </visual>
       <collision name='camera_col'>
-        <pose>0 0 0.02 0 0 0</pose>
+        <pose>0 0 0.02 0 1.57 0</pose>
         <geometry>
           <cylinder>
             <radius>0.01</radius>
