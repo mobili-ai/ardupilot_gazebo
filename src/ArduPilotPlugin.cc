@@ -1941,8 +1941,10 @@ void gz::sim::systems::ArduPilotPlugin::CreateStateJSON(
 
     writer.Key("position");
     writer.StartArray();
-    writer.Double(wldAToBdyA.Pos().X());
-    writer.Double(wldAToBdyA.Pos().Y());
+    // writer.Double(wldAToBdyA.Pos().X());
+    // writer.Double(wldAToBdyA.Pos().Y());
+    writer.Double(0.0);
+    writer.Double(0.0);
     writer.Double(wldAToBdyA.Pos().Z());
     writer.EndArray();
 
