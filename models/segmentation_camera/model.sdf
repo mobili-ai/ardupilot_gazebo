@@ -56,13 +56,15 @@
             <near>0.1</near>
             <far>100</far>
           </clip>
-
-          <segmentation_type>instance</segmentation_type>
+          <!--For black and white segmentation-->
+          <segmentation_type>semantic</segmentation_type>
+          <!--For Color Segmentation-->
+          <!--<segmentation_type>instance</segmentation_type>-->
         </camera>
 
-        <always_on>true</always_on>
-        <update_rate>10</update_rate>
-        <visualize>true</visualize>
+        <always_on>false</always_on>
+        <update_rate>15</update_rate>
+        <visualize>false</visualize>
       </sensor>
 
       <sensor name="camera" type="camera">
@@ -81,9 +83,9 @@
           </clip>
         </camera>
 
-        <always_on>true</always_on>
-        <update_rate>24</update_rate>
-        <visualize>true</visualize>
+        <always_on>false</always_on>
+        <update_rate>15</update_rate>
+        <visualize>false</visualize>
       </sensor>
     </link>
   </model>
